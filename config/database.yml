@@ -25,3 +25,7 @@ production:
   database: postgresql
   encoding: unicode
   pool: 5
+  database: l3_2023_10_04
+  username: l3_2023_10_04_user
+  password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
