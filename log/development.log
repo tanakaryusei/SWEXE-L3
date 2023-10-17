@@ -794,3 +794,273 @@ Processing by TweetsController#new as HTML
 Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 3557)
 
 
+Started GET "/" for 60.124.179.112 at 2023-10-17 02:40:04 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#index as HTML
+******
+  Rendering layout layouts/application.html.erb
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:24
+  Rendered tweets/index.html.erb within layouts/application (Duration: 42.0ms | Allocations: 7240)
+  Rendered layout layouts/application.html.erb (Duration: 359.6ms | Allocations: 44215)
+Completed 200 OK in 397ms (Views: 370.8ms | ActiveRecord: 0.9ms | Allocations: 48776)
+
+
+Started GET "/" for 60.124.179.112 at 2023-10-17 02:40:04 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#index as HTML
+******
+  Rendering layout layouts/application.html.erb
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:24
+  Rendered tweets/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 7390)
+  Rendered layout layouts/application.html.erb (Duration: 128.0ms | Allocations: 39706)
+Completed 200 OK in 155ms (Views: 132.2ms | ActiveRecord: 1.0ms | Allocations: 44263)
+
+
+Started GET "/get_image/4" for 60.124.179.112 at 2023-10-17 02:40:05 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#get_image as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTweet Load (3.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:45:in `get_image'
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 7)
+Sent data  (4.2ms)
+Completed 200 OK in 22ms (Views: 3.9ms | ActiveRecord: 3.3ms | Allocations: 2650)
+
+
+Started DELETE "/tweets/4" for 60.124.179.112 at 2023-10-17 02:40:08 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:39:in `destroy'
+  [1m[36mTweet Destroy (2.1ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/tweets_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:39:in `destroy'
+Redirected to https://ea68acb61e884b2ab236fe9d661d0299.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 25ms (ActiveRecord: 13.1ms | Allocations: 3262)
+
+
+Started GET "/" for 60.124.179.112 at 2023-10-17 02:40:08 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#index as TURBO_STREAM
+******
+  Rendering layout layouts/application.html.erb
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:24
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 890)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 3248)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms | Allocations: 3583)
+
+
+Started GET "/tweets/new" for 60.124.179.112 at 2023-10-17 02:40:10 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 1687)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 3793)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms | Allocations: 4158)
+
+
+Started POST "/tweets" for 60.124.179.112 at 2023-10-17 02:40:16 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "tweet"=>{"message"=>"てすと", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f5d4a20dc18 @tempfile=#<Tempfile:/tmp/RackMultipart20231017-7123-rv94i3.jpg>, @content_type="image/jpeg", @original_filename="GAK76_aozorahimawari_TP_V4.jpg", @headers="Content-Disposition: form-data; name=\"tweet[file]\"; filename=\"GAK76_aozorahimawari_TP_V4.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"送信"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:14:in `create'
+  [1m[36mTweet Create (3.1ms)[0m  [1m[32mINSERT INTO "tweets" ("message", "tdate", "created_at", "updated_at", "file") VALUES (?, ?, ?, ?, ?)[0m  [["message", "てすと"], ["tdate", "2023-10-17 02:40:16.527868"], ["created_at", "2023-10-17 02:40:16.528279"], ["updated_at", "2023-10-17 02:40:16.528279"], ["file", "<65422 bytes of binary data>"]]
+  ↳ app/controllers/tweets_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:14:in `create'
+Redirected to https://ea68acb61e884b2ab236fe9d661d0299.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 23ms (ActiveRecord: 13.6ms | Allocations: 3138)
+
+
+Started GET "/" for 60.124.179.112 at 2023-10-17 02:40:16 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#index as TURBO_STREAM
+******
+  Rendering layout layouts/application.html.erb
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:24
+  Rendered tweets/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1281)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3387)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 3672)
+
+
+Started GET "/get_image/5" for 60.124.179.112 at 2023-10-17 02:40:17 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#get_image as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:45:in `get_image'
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 5)
+Sent data  (1.4ms)
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 721)
+
+
+Started GET "/" for 60.124.179.112 at 2023-10-17 02:40:35 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#index as HTML
+******
+  Rendering layout layouts/application.html.erb
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:24
+  Rendered tweets/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1841)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 4214)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.2ms | Allocations: 5047)
+
+
+Started GET "/get_image/5" for 60.124.179.112 at 2023-10-17 02:40:36 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#get_image as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:45:in `get_image'
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 4)
+Sent data  (1.2ms)
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 728)
+
+
+Started DELETE "/tweets/5" for 60.124.179.112 at 2023-10-17 02:40:39 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:39:in `destroy'
+  [1m[36mTweet Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/tweets_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:39:in `destroy'
+Redirected to https://ea68acb61e884b2ab236fe9d661d0299.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 23ms (ActiveRecord: 12.6ms | Allocations: 2412)
+
+
+Started GET "/" for 60.124.179.112 at 2023-10-17 02:40:40 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#index as TURBO_STREAM
+******
+  Rendering layout layouts/application.html.erb
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:24
+  Rendered tweets/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 884)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 3221)
+Completed 200 OK in 45ms (Views: 36.1ms | ActiveRecord: 0.1ms | Allocations: 3548)
+
+
+Started GET "/tweets/new" for 60.124.179.112 at 2023-10-17 02:40:42 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (Duration: 12.4ms | Allocations: 1160)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 3265)
+Completed 200 OK in 38ms (Views: 37.7ms | ActiveRecord: 0.0ms | Allocations: 3594)
+
+
+Started POST "/tweets" for 60.124.179.112 at 2023-10-17 02:40:47 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "tweet"=>{"message"=>"てすと", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f5d4a2d1af0 @tempfile=#<Tempfile:/tmp/RackMultipart20231017-7123-wmdhyj.jpg>, @content_type="image/jpeg", @original_filename="GAK76_aozorahimawari_TP_V4.jpg", @headers="Content-Disposition: form-data; name=\"tweet[file]\"; filename=\"GAK76_aozorahimawari_TP_V4.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"送信"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:14:in `create'
+  [1m[36mTweet Create (3.5ms)[0m  [1m[32mINSERT INTO "tweets" ("message", "tdate", "created_at", "updated_at", "file") VALUES (?, ?, ?, ?, ?)[0m  [["message", "てすと"], ["tdate", "2023-10-17 02:40:47.156128"], ["created_at", "2023-10-17 02:40:47.156413"], ["updated_at", "2023-10-17 02:40:47.156413"], ["file", "<65422 bytes of binary data>"]]
+  ↳ app/controllers/tweets_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:14:in `create'
+Redirected to https://ea68acb61e884b2ab236fe9d661d0299.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 30ms (ActiveRecord: 15.7ms | Allocations: 2235)
+
+
+Started GET "/" for 60.124.179.112 at 2023-10-17 02:40:47 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#index as TURBO_STREAM
+******
+  Rendering layout layouts/application.html.erb
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:24
+  Rendered tweets/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1263)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3401)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.2ms | Allocations: 3687)
+
+
+Started GET "/get_image/6" for 60.124.179.112 at 2023-10-17 02:40:47 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#get_image as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:45:in `get_image'
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 4)
+Sent data  (1.4ms)
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 720)
+
+
+Started GET "/tweets/6" for 60.124.179.112 at 2023-10-17 02:40:54 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 232)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2552)
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 0.2ms | Allocations: 3348)
+
+
+Started GET "/tweets/6/edit" for 60.124.179.112 at 2023-10-17 02:40:57 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1192)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 3289)
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 0.1ms | Allocations: 4085)
+
+
+Started PATCH "/tweets/6" for 60.124.179.112 at 2023-10-17 02:41:01 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "tweet"=>{"message"=>"てすと", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f5d49b31a48 @tempfile=#<Tempfile:/tmp/RackMultipart20231017-7123-e0cl3v.jpg>, @content_type="image/jpeg", @original_filename="GAK76_aozorahimawari_TP_V4.jpg", @headers="Content-Disposition: form-data; name=\"tweet[file]\"; filename=\"GAK76_aozorahimawari_TP_V4.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"更新", "id"=>"6"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:31:in `update'
+Redirected to https://ea68acb61e884b2ab236fe9d661d0299.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 1069)
+
+
+Started GET "/" for 60.124.179.112 at 2023-10-17 02:41:02 +0000
+Cannot render console from 60.124.179.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TweetsController#index as TURBO_STREAM
+******
+  Rendering layout layouts/application.html.erb
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:24
+  Rendered tweets/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1308)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 3413)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms | Allocations: 3697)
+
+

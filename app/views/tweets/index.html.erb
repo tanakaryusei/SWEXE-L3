@@ -1,6 +1,3 @@
-<% if flash[:notice] %>
-    <%= flash[:notice] %>
-<% end %>
 
 <div id="page">
     <div id="body">
@@ -26,6 +23,9 @@
         <nav>
             <% @tweets.each do |tweet| %>
                 <p>
+                    <% if flash[:notice] %>
+                        <%= flash[:notice] %>
+                    <% end %><br>
                     <%= tweet.message %>
                     <%= image_tag "/get_image/#{tweet.id}" %>
                     <%= ((Time.current - tweet.tdate)/60).to_i %>分前
