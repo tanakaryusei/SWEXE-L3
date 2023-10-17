@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "tweets#index"
   resources :tweets
-  root 'tweets#index'
+  get "get_image/:id", to: "tweets#get_image"
 end

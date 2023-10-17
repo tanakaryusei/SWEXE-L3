@@ -2,14 +2,38 @@
     <%= flash[:notice] %>
 <% end %>
 
-<% @tweets.each do |e| %>
-    <p>
-        <%= e.message %>
-        <%= ((Time.current - e.tdate)/60).to_i %>分
-        <%=link_to '削除', "/tweets/#{e.id}", data: { turbo_method: :delete } %>
-        <%=link_to '表示', "/tweets/#{e.id}" %>
-        <%=link_to '編集', "/tweets/#{e.id}/edit" %>
-    </p>
-<% end %>
+<div id="page">
+    <div id="body">
+        <li><%= link_to "⌂ホーム", root_path %></li>
+        <li><%= link_to "＃話題を検索", root_path %></li>
+        <li><%= link_to "🔔通知", root_path %></li>
+        <li><%= link_to "✉メッセージ", root_path %></li>
+        <li><%= link_to "🔖ブックマーク", root_path %></li>
+        <li><%= link_to "📜リスト", root_path %></li>
+        <li><%= link_to "👤プロフィール", root_path %></li>
+        <li><%= link_to "◎もっと見る", root_path %></li>
+        <div class="border-radius">
+            <li><nav><%= link_to 'ツイートする', new_tweet_path %></li></nav>
+        </div>
+        
+    </div>
 
-<%= link_to '新規追加', 'tweets/new' %>
+    <div id="sub" >
+        <li><%= link_to "ツイート", root_path %></li>
+        <li><%= link_to "ツイートと返信", root_path %></li>
+        <li><%= link_to "メディア", root_path %></li>
+        <li><%= link_to "いいね", root_path %></li>
+        <nav>
+            <% @tweets.each do |tweet| %>
+                <p>
+                    <%= tweet.message %>
+                    <%= image_tag "/get_image/#{tweet.id}" %>
+                    <%= ((Time.current - tweet.tdate)/60).to_i %>分前
+                    <%= link_to '削除', "/tweets/#{tweet.id}", data:{turbo_method: :delete} %>
+                    <%= link_to '表示', "/tweets/#{tweet.id}" %>
+                    <%= link_to "編集", edit_tweet_path(tweet) %>　　　
+                </p>                                               
+            <% end %>
+        </nav>
+    </div>
+</div>
